@@ -1,0 +1,13 @@
+<div class="chat_container">
+    <div class="chat">
+        {{#each denormalizedMessages}}
+            <div>
+                {{this.author.id}}
+                {{this.author.name}}
+            </div>
+            <div>
+                {{this.text}}
+            </div>
+        {{/each}}
+    </div>
+</div>

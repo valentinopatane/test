@@ -1,0 +1,19 @@
+{{#if products.length}}
+<h2 style="color: #fff;">Products List</h2>
+    <table class="product_table">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Thumbnail</th>
+        </tr>
+        {{#each products}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.price}}$</td>
+            <td><img src={{this.thumbnail}} width="40px" height="40px" style="object-fit: contain;"></img></td>
+        </tr>
+        {{/each}}
+    </table>
+{{else}}
+<h3 style="color: #fff;">No products available</h3>
+{{/if}}

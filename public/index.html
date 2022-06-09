@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+    integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Desafio 6 - WebSocket</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <nav>
+        <h1>Products API</h1>
+        <form id="logIn" method="post">
+            <label for="user">Username:</label>
+            <input type="text" name="user" id="inputUser">
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="inputPass">
+            <button id="buttonLogIn">Log In</button>
+        </form>
+    </nav>
+    <header>
+        <h1>Products Realtime API</h1>
+        <div id="welcome"></div>
+    </header>
+
+    <main>
+
+        <section>
+            <form id="form">
+                <label>Product name</label>
+                <input id="inputTitle" type="text" required><br>
+                <label>Price</label>
+                <input id="inputPrice" type="text" required><br>
+                <label>Thumbnail</label>
+                <input id="inputThumbnail" type="text" required><br>
+                <button id="buttonSend">Add</button>
+            </form>
+        </section>
+        <section id="productList"></section>
+
+        <section style="margin-bottom: 50px;">
+            <h2 style="color: #fff;">Live Chat</h2>
+            <div id="messages"></div>
+            
+            <form id="chat_inputs">
+                <label for="name">Name:</label>
+                <input id="name" type="text" name="name" required>
+                <label for="lastname">Lastname:</label>
+                <input id="lastname"type="text" name="lastname" required>
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" required>
+                <label for="alias">Alias:</label>
+                <input type="text" id="alias" name="alias" required>
+                <label for="avatar">Avatar:</label>
+                <input type="text" id="avatar" name="avatar" required>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email"required>
+                <label for="text">Message</label>
+                <textarea id="input_msg" type="textarea" name="text"required></textarea>
+                <button>Send</button>
+            </form>
+            
+        </section>
+
+    </main>
+
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+
+</html>
